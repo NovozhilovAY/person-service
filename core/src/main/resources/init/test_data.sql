@@ -4,9 +4,9 @@ DELETE FROM person_data;
 DELETE FROM medical_card;
 DELETE FROM contact;
 
-INSERT INTO medical_card VALUES (1, 'g', 's', '2022-05-05', 'Comment1');
-INSERT INTO medical_card VALUES (2, 'g', 's', '2022-05-06', 'Comment2');
-INSERT INTO medical_card VALUES (3, 'g', 's', '2022-05-07', 'Comment3');
+INSERT INTO medical_card VALUES (1, 'g', null, '2022-05-05', 'Comment1');
+INSERT INTO medical_card VALUES (2, 'g', null, '2022-05-06', 'Comment2');
+INSERT INTO medical_card VALUES (3, 'g', null, '2022-05-07', 'Comment3');
 INSERT INTO medical_card VALUES (4, 'g', 's', '2022-05-08', 'Comment4');
 INSERT INTO medical_card VALUES (5, 'g', 's', '2022-05-09', 'Comment5');
 INSERT INTO medical_card VALUES (6, 'g', 's', '2022-05-10', 'Comment6');
@@ -25,6 +25,12 @@ INSERT INTO contact VALUES (7, '8-800-555-35-37', 'email7@email.com', null);
 INSERT INTO contact VALUES (8, '8-800-555-35-38', 'email8@email.com', null);
 INSERT INTO contact VALUES (9, '8-800-555-35-39', 'email9@email.com', null);
 INSERT INTO contact VALUES (10, '8-800-555-35-40', 'email10@email.com', null);
+INSERT INTO contact VALUES (11, '8-800-555-35-40', 'email10@email.com', null);
+INSERT INTO contact VALUES (12, '8-800-555-35-40', 'email10@email.com', null);
+INSERT INTO contact VALUES (13, '8-800-555-35-40', 'email10@email.com', null);
+INSERT INTO contact VALUES (14, '8-800-555-35-39', 'email9@email.com', null);
+INSERT INTO contact VALUES (15, '8-800-555-35-39', 'email9@email.com', null);
+INSERT INTO contact VALUES (16, '8-800-555-35-39', 'email9@email.com', null);
 
 INSERT INTO illness VALUES (1, 1, 1, 'A', CURRENT_TIMESTAMP, CURRENT_DATE);
 INSERT INTO illness VALUES (2, 1, 1, 'B', CURRENT_TIMESTAMP, CURRENT_DATE);

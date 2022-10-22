@@ -2,8 +2,8 @@
 create table if not exists medical_card
 (
     id            bigint not null primary key,
-    client_status char   not null,
-    med_status    char   not null,
+    client_status char,
+    med_status    char,
     registry_dt   date,
     comment       text
 );

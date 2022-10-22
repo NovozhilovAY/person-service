@@ -28,10 +28,10 @@ public class MedicalCard {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "client_status", nullable = false, length = 1)
+    @Column(name = "client_status", length = 1)
     private String clientStatus;
 
-    @Column(name = "med_status", nullable = false, length = 1)
+    @Column(name = "med_status", length = 1)
     private String medStatus;
 
     @Column(name = "registry_dt")
