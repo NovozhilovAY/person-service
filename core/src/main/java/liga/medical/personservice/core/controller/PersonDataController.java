@@ -1,5 +1,7 @@
 package liga.medical.personservice.core.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import liga.medical.personservice.api.service.IService;
 import liga.medical.personservice.core.model.PersonData;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/person-data")
+@Api(value = "API для работы с данными пользователей")
 public class PersonDataController {
 
     private IService<PersonData> personDataService;
@@ -22,16 +25,19 @@ public class PersonDataController {
     }
 
     @GetMapping
+    @ApiOperation(value = "Получение всех данных пользователей")
     public List<PersonData> getAllPersonData() {
         return personDataService.getAll();
     }
 
     @GetMapping("/{id}")
+    @ApiOperation(value = "Получение данных о пользователе по id")
     public PersonData getPersonDataById(@PathVariable long id) {
         return personDataService.getById(id);
     }
 
     @PostMapping
+    @ApiOperation(value = "Добавление данных о пользователе")
     public Integer insertPersonData(@RequestBody PersonData personData) {
         return personDataService.insert(personData);
     }
