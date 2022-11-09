@@ -1,1 +1,0 @@
-SELECT * FROM address ORDER BY id LIMIT (SELECT COUNT(*) / 2 FROM address);

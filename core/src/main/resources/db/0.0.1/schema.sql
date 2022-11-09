@@ -49,3 +49,27 @@ create table if not exists address
     building   varchar(32)  not null,
     flat       varchar(32)
 );
+
+create table if not exists signals
+(
+    id serial not null primary key,
+    person_data_id bigint not null references person_data(id),
+    description varchar(32) not null,
+    type integer not null
+);
+
+create table if not exists users(
+   id serial not null primary key,
+   login varchar(128) not null,
+   password varchar(128) not null
+);
+
+create table if not exists roles(
+   id serial not null primary key,
+   name varchar(32) not null
+);
+
+create table if not exists users_roles(
+   user_id bigint not null references users(id),
+   role_id bigint not null references roles(id)
+);

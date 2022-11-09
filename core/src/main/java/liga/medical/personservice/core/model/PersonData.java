@@ -8,11 +8,13 @@ import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "person_data")
@@ -51,5 +53,9 @@ public class PersonData {
     @ManyToOne
     @JoinColumn(name = "parent_id")
     private PersonData parent;
+
+    @OneToMany
+    @JoinColumn(name = "person_data_id")
+    private List<Signal> signals;
 
 }

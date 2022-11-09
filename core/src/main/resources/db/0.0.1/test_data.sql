@@ -1,8 +1,3 @@
-DELETE FROM illness;
-DELETE FROM address;
-DELETE FROM person_data;
-DELETE FROM medical_card;
-DELETE FROM contact;
 
 INSERT INTO medical_card VALUES (1, 'g', null, '2022-05-05', 'Comment1');
 INSERT INTO medical_card VALUES (2, 'g', null, '2022-05-06', 'Comment2');
@@ -66,3 +61,8 @@ INSERT INTO person_data VALUES (7, 'lastName7', 'firstName7', '1999-02-11', 23, 
 INSERT INTO person_data VALUES (8, 'lastName8', 'firstName8', '1999-02-12', 23, 'm', 8, 8, null);
 INSERT INTO person_data VALUES (9, 'lastName9', 'firstName9', '1999-02-13', 23, 'm', 9, 9, null);
 INSERT INTO person_data VALUES (10, 'lastName10', 'firstName10', '1999-02-14', 23, 'm', 10, 10, null);
+
+INSERT INTO users (login, password) VALUES ('admin', '$2a$10$q2e864w/bAAWQivGH8JjqeDmOHfziVryRSeSZBqb8njFoIOG7XE8G');
+INSERT INTO roles (name) VALUES ('ROLE_ADMIN');
+INSERT INTO roles (name) VALUES ('ROLE_USER');
+INSERT INTO users_roles VALUES (1 , 1);

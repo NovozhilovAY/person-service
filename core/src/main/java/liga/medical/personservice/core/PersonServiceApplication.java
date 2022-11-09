@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"liga.medical.personservice", "liga.medical.common.service"})
+@ComponentScan(basePackages = {"liga.medical.personservice", "liga.commonmodule.core"})
 public class PersonServiceApplication {
 
     public static void main(String[] args) {
